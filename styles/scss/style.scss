@@ -1,0 +1,426 @@
+@import './templates';
+@import './changeable';
+
+.conteiner{
+    max-width: 90rem;
+    margin:  auto;
+    padding:0 10px;
+    position: relative;
+}
+
+
+.header {
+    @extend %flexcenter;
+    justify-content: space-between;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+
+    // .header__nav-lists
+
+    &__nav-lists {
+        display: flex;
+        gap: 4rem;
+    }
+
+    // .header__nav-list
+
+    &__nav-list {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+        &:hover{
+            border-color: $nav-list-color;
+        }
+    }
+
+    // .header__nav-linc
+
+    &__nav-linc {
+        position: relative;
+        color: $nav-list-color;
+        font-size: 1.3rem;
+    }
+}
+
+// =======================================
+
+.home {
+
+    // .home__block
+
+    &__block {
+        display: flex;
+        &::before{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../images/img/Decore.svg);
+        background-position: right;
+        background-repeat: no-repeat;
+        margin-top: -15rem;
+        }
+    }
+
+    // .home__info
+
+    &__info {
+        margin: 8.4rem 0 0 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    // .home__info-subtitle
+
+    &__info-subtitle {
+        color:$info-subtitle-color;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    // .home__info-title
+
+    &__info-title {
+        @extend %title;
+        margin: 1.5rem 0 1.9rem 0;
+    }
+
+    // .home__info-text
+
+    &__info-text {
+        color: $info-text-color;
+        font-size: 1rem;
+        line-height: 1.9rem;
+        max-width: 24rem;
+    }
+
+    // .home__decor-btn
+
+    &__decor-btn {
+        width: 15rem;
+        height: 4rem;
+        margin-top: 2.3rem;
+        @extend %fsbtn;
+        font-size: 1.2rem;
+        top: 0;
+        position: relative;
+        @extend %btnhover;
+    }
+
+    // .home__decor-woman
+
+    &__decor-woman {
+        position: relative;
+        z-index: 2;
+        top: 3rem;
+        left: 0;
+    }
+
+    // .home__decor-airplane
+
+    &__decor-airplane {
+        position: absolute;
+        z-index: 2;
+        top: 9rem;
+        left: 43rem;
+    }
+}
+
+// =======================================
+
+.map {
+
+    // .map__block
+
+    &__block {
+        position: relative;
+        svg{
+            width: 800px;
+            position: absolute;
+            top: 110px;
+            left:220px;
+        }
+    }
+}
+
+.map-title{
+    @extend %title;
+    font-size: 4.5rem;
+    margin: 1.5rem 0 1.9rem 0;
+    text-align: center;
+}
+
+.map-img {
+    display: block;
+    margin: 2rem auto;
+    border: 3px solid $gray;
+    border-radius: 20px;
+}
+
+.country{
+    fill: none;
+    stroke: transparent;
+    stroke-width: 2px;
+    cursor: pointer;
+    pointer-events: all;
+    &:hover{
+        animation: border 2s linear infinite;
+    }
+}
+
+@keyframes border {
+    0% {
+        stroke: $keyframes-border1;
+    }
+    50% {
+        stroke:$keyframes-border2;
+    }
+    100% {
+        stroke: $keyframes-border1;
+    }
+}
+
+.tultip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border: 2px solid $gray;
+    border-radius: 5px;
+    background: $tultip-bg;
+    font-weight: bold;
+    margin-right: 100px;
+    display: none;
+}
+
+// ===============================================
+
+.hotels__poland, .hotels__hangary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.hotels-cauntry{
+    display: none;
+}
+.hotels-title {
+    @extend %title;
+    font-size: 4.5rem;
+    margin: 1.5rem 0 1.9rem 0;
+    text-align: center;
+}
+
+.hotel {
+
+    // .hotel__block
+
+    &__block {
+        @extend %flexcenter;
+        flex-direction: column;
+        max-width: 20rem;
+        border: 2px solid $block-border;
+        border-radius: 1rem;
+        box-shadow: 0px 20px 35px 0px $block-box-shadow;
+    }
+
+    // .hotel__block-title
+
+    &__block-title {
+        color:$block-logo-color;
+        font-size: 2rem;
+        font-weight: 700;
+        height: 80px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+
+    // .hotel__block-img
+
+    &__block-img {
+        width: 20rem;
+        border: 2px solid $block-img-border;
+    }
+
+    // .hotel__bloc-description
+
+    &__bloc-description {
+        flex: 1 1 auto ;
+    }
+
+    // .hotel__block-text
+
+    &__block-text {
+        color: $info-text-color;
+        font-size: 1rem;
+        padding: 10px 5px;
+    }
+
+    // .hotel__block-btn
+
+    &__block-btn {
+        @extend %flexcenter;
+        justify-content: center;
+        width: 13rem;
+        height: 3rem;
+        margin: 1.5rem 0 1.5rem;
+        top: 0;
+        position: relative;
+        @extend %fsbtn;
+        @extend %btnhover;
+    }
+}
+
+// =====================================
+
+.email {
+    margin-top: 7rem;
+    // .email__block
+
+    &__block {
+        @extend %flexcenter;
+        flex-direction: column;
+        border-radius:  8.0625rem 1.25rem 1.25rem 1.25rem;
+        background: $block-bg;
+    }
+
+    // .email__block-title
+
+    &__block-title {
+        color: $info-text-color;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 3.4rem;
+        margin: 5rem 20rem 0;
+    }
+
+    // .email__block-form
+
+    &__block-form {
+        margin: 5rem;
+    }
+
+    // .email__form-input
+
+    &__form-input {
+        width: 26rem;
+        height: 4rem;   
+        border-radius: 0.6rem;
+        background: $form-input-bg;
+        &::placeholder{
+            padding-left: 10px;
+            color: $placeholder-color;
+            font-size: 1.5rem;
+        }  
+    }
+
+    // .email__form-btn
+
+    &__form-btn {
+        width: 11rem;
+        height: 4rem;
+        margin-left: 1.5rem;
+        top: 0;
+        position: relative;
+        @extend %fsbtn;
+        @extend %btnhover;
+    }
+}
+
+// ==============================================
+
+.footer {
+
+    // .footer__block
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        margin: 10rem 0 5rem 0;
+    }
+
+    // .footer__block-logo
+
+    &__block-logo {
+        color:$block-logo-color;
+        font-size: 2.75rem;
+    }
+
+    // .footer__block-text
+
+    &__block-text {
+        @extend %text;
+        margin-top: 1.2rem;
+        max-width: 13rem;
+    }
+
+    // .footer__block-list
+
+    &__block-list {
+        margin-top: 1rem;
+    }
+
+    // .footer__block-linc
+
+    &__block-linc {
+        @extend %text;
+    }
+
+    // .footer__block-sety
+
+    &__block-sety {
+        text-align: center;
+    }
+}
+
+.block {
+
+    // .block__company-title
+
+    &__company-title {
+        color: $company-title-color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 124.5%;
+        margin-bottom: 1.2rem;
+    }
+
+    // .block__sety-icons
+
+    &__sety-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .block__sety-icon
+
+    &__sety-icon {
+        @extend %flexcenter;
+        gap: 1.5rem;
+    }
+
+    // .block__sety-text
+
+    &__sety-text {
+        @extend %text;
+        margin-top: 2.5rem;
+    }
+}
+
+.footer-text{
+    text-align: center;
+    @extend %text;
+    font-size: 0.8rem;
+    padding-bottom: 4rem;
+}
+.activ{
+    display: block;
+}

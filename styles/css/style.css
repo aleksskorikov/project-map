@@ -1,4 +1,4 @@
-.block__sety-icons, .email__block, .hotel__block-btn, .hotel__block, .header {
+.block__sety-icon, .email__block, .hotel__block-btn, .hotel__block, .header {
   display: flex;
   align-items: center;
 }
@@ -48,12 +48,10 @@
   position: relative;
   z-index: 2;
 }
-
 .header__nav-lists {
   display: flex;
   gap: 4rem;
 }
-
 .header__nav-list {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -62,7 +60,6 @@
 .header__nav-list:hover {
   border-color: #212832;
 }
-
 .header__nav-linc {
   position: relative;
   color: #212832;
@@ -80,50 +77,31 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/img/Decore.svg);
+  background-image: url(../../images/img/Decore.svg);
   background-position: right;
   background-repeat: no-repeat;
   margin-top: -15rem;
 }
-
-.home__decor-woman {
-  position: relative;
-  z-index: 2;
-  top: 3rem;
-  left: 0;
-}
-
-.home__decor-airplane {
-  position: absolute;
-  z-index: 2;
-  top: 9rem;
-  left: 43rem;
-}
-
 .home__info {
   margin: 8.4rem 0 0 0;
   position: relative;
   z-index: 2;
 }
-
 .home__info-subtitle {
   color: #DF6951;
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .home__info-title {
   margin: 1.5rem 0 1.9rem 0;
 }
-
 .home__info-text {
   color: #5E6282;
   font-size: 1rem;
   line-height: 1.9rem;
   max-width: 24rem;
 }
-
 .home__decor-btn {
   width: 15rem;
   height: 4rem;
@@ -131,6 +109,28 @@
   font-size: 1.2rem;
   top: 0;
   position: relative;
+}
+.home__decor-woman {
+  position: relative;
+  z-index: 2;
+  top: 3rem;
+  left: 0;
+}
+.home__decor-airplane {
+  position: absolute;
+  z-index: 2;
+  top: 9rem;
+  left: 43rem;
+}
+
+.map__block {
+  position: relative;
+}
+.map__block svg {
+  width: 800px;
+  position: absolute;
+  top: 110px;
+  left: 220px;
 }
 
 .map-title {
@@ -144,16 +144,6 @@
   margin: 2rem auto;
   border: 3px solid gray;
   border-radius: 20px;
-}
-
-.map__block {
-  position: relative;
-}
-.map__block svg {
-  width: 800px;
-  position: absolute;
-  top: 110px;
-  left: 220px;
 }
 
 .country {
@@ -215,7 +205,6 @@
   border-radius: 1rem;
   box-shadow: 0px 20px 35px 0px rgba(241, 165, 1, 0.15);
 }
-
 .hotel__block-title {
   color: #181E4B;
   font-size: 2rem;
@@ -225,22 +214,18 @@
   align-items: center;
   display: flex;
 }
-
 .hotel__block-img {
   width: 20rem;
   border: 2px solid rgb(108, 106, 106);
 }
-
 .hotel__bloc-description {
   flex: 1 1 auto;
 }
-
 .hotel__block-text {
   color: #5E6282;
   font-size: 1rem;
   padding: 10px 5px;
 }
-
 .hotel__block-btn {
   justify-content: center;
   width: 13rem;
@@ -253,13 +238,11 @@
 .email {
   margin-top: 7rem;
 }
-
 .email__block {
   flex-direction: column;
   border-radius: 8.0625rem 1.25rem 1.25rem 1.25rem;
   background: rgba(223, 215, 249, 0.4);
 }
-
 .email__block-title {
   color: #5E6282;
   text-align: center;
@@ -268,11 +251,9 @@
   line-height: 3.4rem;
   margin: 5rem 20rem 0;
 }
-
 .email__block-form {
   margin: 5rem;
 }
-
 .email__form-input {
   width: 26rem;
   height: 4rem;
@@ -289,7 +270,6 @@
   color: #39425D;
   font-size: 1.5rem;
 }
-
 .email__form-btn {
   width: 11rem;
   height: 4rem;
@@ -303,15 +283,19 @@
   justify-content: space-between;
   margin: 10rem 0 5rem 0;
 }
-
 .footer__block-logo {
   color: #181E4B;
   font-size: 2.75rem;
 }
-
 .footer__block-text {
   margin-top: 1.2rem;
   max-width: 13rem;
+}
+.footer__block-list {
+  margin-top: 1rem;
+}
+.footer__block-sety {
+  text-align: center;
 }
 
 .block__company-title {
@@ -321,19 +305,14 @@
   line-height: 124.5%;
   margin-bottom: 1.2rem;
 }
-
-.footer__block-list {
-  margin-top: 1rem;
-}
-
-.footer__block-sety {
-  text-align: center;
-}
-
 .block__sety-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block__sety-icon {
   gap: 1.5rem;
 }
-
 .block__sety-text {
   margin-top: 2.5rem;
 }
